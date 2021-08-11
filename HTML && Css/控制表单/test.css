@@ -1,0 +1,40 @@
+form{
+    width: 320px;
+    height: 150px;
+    padding-top: 20px;
+    margin: 50px auto;
+    background: #f5f8fd;
+    border-radius: 20px;
+    border: 3px solid #4faccb;
+}
+p{
+    margin-top: 15px;
+    text-align: center;
+}
+p span{
+    width: 40px;
+    display: inline-block;
+    text-align: right;
+}
+.num,.pass{
+    width: 152px;
+    height: 18px;
+    border: 1px solid #38a1bf;
+    padding: 2px 2px 2px 22px;
+}
+.num{
+    background: url(images/1.jpg) no-repeat 5px center #FFF;
+    color: #999;
+}
+.pass{
+    background: url(images/2.jpg) no-repeat 5px center #FFF;
+}
+.btn01,.btn02{
+    width: 60px;
+    height: 25px;
+    border-radius: 3px;
+    border: 1px solid #6b5d50;
+    margin-left: 30px;
+}
+.btn01{ background: #3bb7ea;}
+.bth02{ background: #fb8c16;}

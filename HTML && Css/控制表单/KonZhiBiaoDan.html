@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>控制表单样式</title>
+    <style>
+        .o1{background-color: rgba(255, 0, 0, 0.945);}
+        .o2{background-color: rgb(43, 255, 0);}
+        .o3{background-color: rgb(238, 255, 0);}
+        .o4{background-color: rgb(0, 17, 255);}
+        .o5{background-color: rgb(255, 166, 0);}
+        .o6{background-color: rgb(255, 0, 212);}
+    </style>
+</head>
+<body>
+    请输入文本：<br />
+    <textarea cols="每行中的字符数" rows="显示的行数"></textarea>
+    <form action="#" method="POST">
+        城区:<br />
+        <select>
+            <optgroup label="北京">
+                <option class="o1">东城区</option>
+                <option class="o2">西城区</option>
+                <option class="o3">朝阳区</option>
+                <option class="o4">海淀区</option>
+            </optgroup>
+            <optgroup label="上海">
+                <option class="o5">浦东新区</option>
+                <option class="o6">徐汇区</option>
+                <option class="o1">虹口区</option>
+            </optgroup>
+        </select>
+    </form>
+    <form action="#" method="POST">
+        <p>
+            <span>账号:</span>
+            <input type="text" name="username" value="admmin" class="num" pattern="^ [a-zA-Z] [a-zA-Z0-9_] {4,45}$" />
+        </p>
+        <p>
+            <span>密码:</span>
+            <input type="password" name="pwd" class="pass" pattern="^[a-zA-Z]\w{5,17}$"/>
+        </p>
+    </form>
+</body>
+</html>
