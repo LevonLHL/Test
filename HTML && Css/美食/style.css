@@ -1,0 +1,122 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+.text-primary{
+    color: crimson;
+}
+a{
+    text-decoration: none;
+}
+.container{
+    height: 100px;
+    width: 2000px;
+   background-color: rgb(216, 117, 51);
+   display: flex;
+    position: relative;
+}
+.container h2{
+    float: left;
+    margin-left: 60px;
+    width: 20%;
+    padding-left: 120px;
+}
+.container .img{
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    padding-left: 30px;
+}
+.img img{
+    border: 1px solid #fff;
+    border-radius: 20px;
+}
+.container nav{
+    font-size: 20px;
+    float: right;
+    width: 80%;
+    text-align: center;
+}
+nav .ul{
+    list-style: none;
+}
+ul li{
+    display: inline-block;
+    text-align: center;
+    margin: 0 30px;
+    padding: 20px;
+}
+nav .ul li:hover{
+    background-color: chocolate;
+    height: 20px;
+    width: 50px;
+    color: rgb(74, 50, 160);
+}
+/*首页面背景图片*/
+.content{
+    height: 500px;
+    width: 2500px;
+}
+.content h2{
+    margin: 0 20px;
+    padding: 0 30px;
+}
+.content h2 img{
+    background: white;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    float: right;
+    text-align: center;
+   margin-top: 10px;
+}
+.content .ul2{
+    list-style:none;
+    color: deeppink;
+    font-size: 20px;
+    text-align: center;
+    background: slategrey;
+    height: 50px;
+    width: auto;
+    padding: 10px;
+}
+.content .ul2 li{
+    margin: 0 20px;
+}
+.content .ul2 li:hover{
+    background: coral;
+    height: 15px;
+    width: 80px;
+    color: #333;
+}
+/*part部分*/
+.part{
+    width: 2000px;
+    height: 300px;
+    display: flex;
+    text-align: center;
+}
+.introduce{
+    /* float: left; */
+    display: inline-block;
+    width: 25%;
+    height: 300px;
+    text-align: left;
+    padding: 20px;
+}
+.introduce p{
+    color: rgb(105, 255, 163);
+    line-height: 1.5;
+    font-family: "Segoe UI Black";
+}
+.introduce .bg-white{
+    background: #eee;
+    width: 25%;
+    height: 300px;
+}
+.introduce .bg-one{
+    background: rgb(255, 80, 211);
+    width: 25%;
+    height: 300px;
+}
