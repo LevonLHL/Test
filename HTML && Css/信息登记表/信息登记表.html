@@ -1,0 +1,73 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        body{
+            background: url("https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=309787133,2850870911&fm=26&gp=0.jpg")no-repeat center center/cover;
+            height: 680px;
+        }
+        .img{
+            float: right;
+            letter-spacing: 3px;
+            margin-top: 50px;
+            margin-right: 180px;
+          color: bisque;
+            padding: 20px;
+        }
+        .img span{
+            font-size: 14px;
+            margin-right: 20px;
+        }
+        .img input{
+            background-color: #eee;
+            margin: 10px;
+        }
+        #sum input{
+            position: relative;
+            margin-top: 30px;
+            text-align: center;
+            margin-left: 100px;
+        }
+        .btn:hover{
+            background: coral;
+        }
+        .cancel:hover{
+            background: coral;
+        }
+        input{
+            border: 1px solid #f441a5;
+        }
+    </style>
+</head>
+<body>
+<div class="img">
+    <form action="#" method="post">
+        <span>用户登录:</span>
+        <input type="text" name="name" placeholder="myname@163.com" autofocus="autofocus"><br>
+        <span>真实姓名:</span>
+        <input type="text" name="name" placeholder="如：王明"><br>
+        <span>真实年龄:</span>
+        <input type="number" name="name"><br>
+        <span>出生日期:</span>
+        <input type="date" name="name" value="1999-10-9"><br>
+        <span>电子邮箱:</span>
+        <input type="email" name="name" placeholder="12345@126.com"><br>
+        <span>身份证号:</span>
+        <input type="text" name="name"><br>
+        <span>手机号码:</span>
+        <input type="tel" name="name"><br>
+        <span>个人主页:</span>
+        <input type="url" name="name" placeholder="http://www.itcoast.cn"><br>
+        <span>选幸运色:</span>
+        <input type="color" name="name"><br>
+        <div id="sum">
+            <input type="submit" class="btn" value="提交"/>
+            <input type="reset" class="cancel" value="重置">
+        </div>
+    </form>
+</div>
+</body>
+</html>
