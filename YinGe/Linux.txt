@@ -1,0 +1,644 @@
+1.Linux能做什么
+Linux和我们常见的Windows一样，都是操作系统，但不同的是：
+Windows:收费的，不开源的，主要用于日常办公、游戏、娱乐多一些
+Linux:免费的，开源的，主要用于服务器领域，性能稳定，安全，高效率
+例如:新浪、百度、淘宝等互联网公司，他们使用的服务器全都是Linux系统，全球500强企业95%的服务器使用的都是Linux系统
+
+
+2.学完后可以掌握到哪些技术
+学习完系统精英工程师 课程后，学生可以掌握到：
+网络服务器运维、数据库运维、自动化运维技术、能够利用shell及python编写自动化运维工具。
+能够解决运维过程中出现的各种问题，例如网站访问慢等
+具备中小型公司公有云运维的能力，例如公司使用的是阿里云、AWS等
+掌握中大型公司私有云平台的构建及运维，例如构建及运维京东私有云平台
+能够利用Shell脚本开发各种运维工具
+能够利用Python开发基本的运维平台
+
+
+3.课程学完能到达什么程度？
+能够胜任中大型公司如新浪、搜狐、京东中高级运维工程师
+能够胜任中小型公司公有云运维架构师
+能够作为云计算工程师独立构建或运维中小型公司私有云平台
+能够从事Linux运维开发及云计算开发岗位
+
+
+
+                                        开源与Linux系统发展史
+1.开源软件
+把软件程序与源代码文件一起打包提供给用户，让用户在不受限制地使用某个软件功能的基础上还可以按需进行修改，或编制成衍生产品再发布出去。用户具有使用自由、修改自由、重新发布自由以及创建衍生品的自由。
+
+
+2.开源软件特性
+低风险：
+使用闭源软件无疑把命运交付给他人，一旦封闭的源代码没有人来维护，你将进退维谷；而且相较于商业软件公司，开源社区很少存在倒闭的问题。
+高品质：
+相较于闭源软件产品，开源项目通常是由开源社区来研发及维护的，参与编写、维护、测试的用户量众多，一般的bug还没有等爆发就已经被修补。
+低成本：
+开源工作者都是在幕后默默且无偿地付出劳动成果，为美好的世界贡献一份力量，因此使用开源社区推动的软件项目可以节省大量的人力、物力和财力。
+更透明：
+没有哪个笨蛋会把木马、后门等放到开放的源代码中，这样无疑是把自己的罪行暴露在阳光之下。
+
+
+3.常见开源协议
+因此世界上现在有60多种被开源促进组织（Open Source Initiative）认可的开源许可协议来保证开源工作者的权益。
+
+GNU GPL（GNU General Public License，GNU通用公共许可证）
+只要软件中包含了遵循GPL协议的产品或代码，该软件就必须也遵循GPL许可协议且开源、免费，因此这个协议并不适合商用软件。遵循该协议的开源软件数量极其庞大，包括Linux系统在内的大多数的开源软件都是基于这个协议的。
+复制自由
+  允许把软件复制到任何人的电脑中，并且不限制复制的数量。
+传播自由
+  允许软件以各种形式进行传播。
+收费传播
+  允许在各种媒介上出售该软件，但必须提前让买家知道这个软件是可以免费获得的；因此，一般来讲，开源软件都是通过为用户提供有偿服务的形式来盈利的。
+修改自由
+  允许开发人员增加或删除软件的功能，但软件修改后必须依然基于GPL许可协议授权。
+
+BSD（Berkeley Software Distribution，伯克利软件发布版）许可协议
+用户可以使用、修改和重新发布遵循该许可的软件，并且可以将软件作为商业软件发布和销售。
+如果再发布的软件中包含源代码，则源代码必须继续遵循BSD许可协议。
+如果再发布的软件中只有二进制程序，则需要在相关文档或版权文件中声明原始代码遵循了BSD协议。
+不允许用原始软件的名字、作者名字或机构名称进行市场推广。
+
+Apache许可证版本（Apache License Version）许可协议
+在为开发人员提供版权及专利许可的同时，允许用户拥有修改代码及再发布的自由。该许可协议适用于商业软件，现在热门的Hadoop、Apache HTTP Server、MongoDB等项目都是基于该许可协议研发的
+该软件及其衍生品必须继续使用Apache许可协议。
+如果修改了程序源代码，需要在文档中进行声明。
+若软件是基于他人的源代码编写而成的，则需要保留原始代码的协议、商标、专利声明及其他原作者声明的内容信息。
+如果再发布的软件中有声明文件，则需在此文件中标注Apache许可协议及其他许可协议。
+
+MPL（Mozilla Public License，Mozilla公共许可）许可协议
+相较于GPL许可协议，MPL更加注重对开发者的源代码需求和收益之间的平衡。
+
+MIT（Massachusetts Institute of Technology）许可协议
+目前限制最少的开源许可协议之一，只要程序的开发者在修改后的源代码中保留原作者的许可信息即可，因此普遍被商业软件所使用。
+
+
+
+                                        Linux发展史
+20世纪70年代
+
+开源免费的UNIX时代
+1979年
+
+AT&T公司宣布了对UNIX系统的商业化计划
+1984年
+
+Richard Stallman发起了GNU源代码开放计划并制定了著名的GPL许可协议
+1987年
+
+GNU计划获得了一项重大突破—gcc编译器发布
+1991年
+
+芬兰赫尔辛基大学的在校生Linus Torvalds基于GUN GPL许可协议编写了一款名为Linux的操作系统
+1994年
+
+Bob Young在Linux系统内核的基础之上，集成了众多的源代码和程序软件，发布了红帽系统并开始出售技术服务
+1998年
+
+以IBM和Intel为首的多家IT企业巨头开始大力推动开放源代码软件的发展
+
+
+
+                                        Linux名词
+Linux系统内核指的是一个由Linus Torvalds负责维护，提供硬件抽象层、硬盘及文件系统控制及多任务功能的系统核心程序。
+Linux发行套件系统是我们常说的Linux操作系统，也即是由Linux内核与各种常用软件的集合产品。
+
+
+
+
+
+RHCSA
+管理文件、目录、文档以及命令行环境；
+使用分区、LVM逻辑卷管理本地存储；
+安装、更新、维护、配置系统与核心服务；
+熟练创建、修改、删除用户与用户组，并使用LDAP进行集中目录身份认证；
+熟练配置防火墙以及SELinux来保障系统安全。
+
+RHCE
+熟练配置防火墙规则链与SElinux安全上下文；
+配置iSCSI（互联网小型计算机系统接口）服务；
+编写Shell脚本来批量创建用户、自动完成系统的维护任务；
+配置HTTP/HTTPS网络服务；
+配置FTP服务；
+配置NFS服务；
+配置SMB服务；
+配置SMTP服务；
+配置SSH服务；
+配置NTP服务。
+
+RHCA
+欲取得红帽RHCA认证，您必须通过以下任意5门认证考试。
+考试代码	认证名称
+EX210	红帽OpenStack 认证系统管理员考试
+EX220	红帽混合云管理专业技能证书考试
+EX236	红帽混合云存储专业技能证书考试
+EX248	红帽认证 JBoss管理员考试
+EX280	红帽平台即服务专业技能证书考试
+EX318	红帽认证虚拟化管理员考试
+EX401	红帽部署和系统管理专业技能证书考试
+EX413	红帽服务器固化专业技能证书考试
+EX436	红帽集群和存储管理专业技能证书考试
+EX442	红帽性能调优专业技能证书考试
+Centos系统在企业中一般是安装在服务器上的，但是我们学习的时候买台服务器并不方便，所以我们可以将其安装在虚拟机中(实际上很多企业也这么做)
+Centos是开源免费的操作系统，任何人都可以在Centos官网免费下载安装使用这个操作系统，不过众所周知的原因，这个网站在大陆打开并不快，所以推荐使用英格提供的下载地址下载
+vmware workstation是虚拟机软件，已经在之前的课程中提供
+
+
+
+
+
+
+
+
+                                        虚拟机内部
+初识shell
+shell是系统的用户界面 ,提供了用户与内核进行交互操作的一种接口。它接收用户输入的命令并把它送入内核去执行。实际上shell是一个命令解释器，它解释用户输入的命令并且把用户的意图传达给内核。
+
+我们可以使用shell实现对Linux系统单的大部分管理，例如：
+
+文件管理
+用户管理
+权限管理
+磁盘管理
+软件管理
+网络管理
+....
+使用shell的两种方式
+
+输入命令		效率低		适合少量的工作
+
+shell script	效率高		适合完成复杂，重复性工作
+
+
+
+bash shell提示符
+[root@xwz ~]# echo $PS1
+[\u@\h \W]\$
+​
+[root@xwz ~]# date
+2025年 08月 21日 星期三 11:34:43 CST
+​
+[root@xwz ~]# whoami
+root
+​
+[root@xwz ~]# useradd aaron
+[root@xwz ~]# passwd aaron
+更改用户 aaron 的密码 。
+新的 密码：
+重新输入新的 密码：
+passwd：所有的身份验证令牌已经成功更新。
+
+
+
+shell 语法
+命令		选项		参数
+
+[root@xwz ~]# ls
+[root@xwz ~]# ls -a
+[root@xwz ~]# ls -a /home
+命令：整条shell命令的主体
+
+选项：会影响会微调命令的行为，通常以-或者--开头
+
+参数：命令作用的对象
+
+
+
+bash基本特性
+自动补全
+[root@xwz ~]# ls /etc/sysconfig/network-scripts/
+[root@xwz ~]# ls /etc/sysconfig/network-scripts/ifcfg-ens33 
+[root@xwz ~]# cat /etc/sysconfig/network-scripts/ifcfg-ens33 
+[root@xwz ~]# systemctl restart crond.service
+[root@xwz ~]# date -s 12:30
+
+
+
+快捷键
+快捷键	作用
+^C	终止前台运行的程序
+^D	退出 等价exit
+^L	清屏
+^A	光标移动到命令行的最前端
+^E	光标移动到命令行的后端
+^U	删除光标前所有字符
+^K	删除光标后所有字符
+^R	搜索历史命令，利用关键词
+Alt+.	引用上一个命令的最后一个参数，等价于!$
+ESC.	引用上一个命令的最后一个参数，等价于!$
+[root@xwz ~]# ls /etc/sysconfig/network-scripts/ifcfg-ens33 
+/etc/sysconfig/network-scripts/ifcfg-ens33
+[root@xwz ~]# cat [ESC.]
+
+
+
+历史命令
+[root@xwz ~]# history 
+光标上下键
+
+^R
+
+搜索历史命令（输入一段某条命令的关键字:必须是连续的）
+!220
+
+执行历史命令中第220条命令
+!字符串
+
+搜索历史命令中最近一个以xxxx字符开头的命令，例如!ser
+!$
+
+引用上一个命令的最后一个参数 
+[root@xwz ~]# ls /root/home
+[root@xwz ~]# cd !$
+[root@xwz ~]# ls /root/home
+ls: 无法访问/root/home: 没有那个文件或目录
+[root@xwz ~]# mkdir !$
+mkdir /root/home
+[root@xwz ~]# touch !$/file1
+touch /root/home/file1
+[root@xwz ~]# systemctl restart crond
+[root@xwz ~]# ls
+anaconda-ks.cfg  home
+[root@xwz ~]# date
+2019年 08月 21日 星期三 12:16:23 CST
+[root@xwz ~]# !sy
+systemctl restart crond
+
+
+
+命令别名
+
+[root@xwz ~]# alias wl='cat /etc/sysconfig/network-scripts/ifcfg-ens33'
+# 建立别名(临时的，仅在当前shell生效)
+[root@xwz ~]# wl
+TYPE="Ethernet"
+PROXY_METHOD="none"
+BROWSER_ONLY="no"
+BOOTPROTO="dhcp"
+DEFROUTE="yes"
+IPV4_FAILURE_FATAL="no"
+IPV6INIT="yes"
+IPV6_AUTOCONF="yes"
+IPV6_DEFROUTE="yes"
+IPV6_FAILURE_FATAL="no"
+IPV6_ADDR_GEN_MODE="stable-privacy"
+NAME="ens33"
+UUID="1864a917-1e72-452d-a4c8-0c0d7e6757b0"
+DEVICE="ens33"
+ONBOOT="yes"
+[root@xwz ~]# unalias wl
+# 取消wl这个别名
+
+[root@xwz ~]# alias   # 查看系统当前的别名
+alias cp='cp -i'
+alias egrep='egrep --color=auto'
+alias fgrep='fgrep --color=auto'
+alias grep='grep --color=auto'
+alias l.='ls -d .* --color=auto'
+alias ll='ls -l --color=auto'
+alias ls='ls --color=auto'
+alias mv='mv -i'
+alias rm='rm -i'
+alias which='alias | /usr/bin/which --tty-only --read-alias --show-dot --show-tilde'
+[root@xwz ~]# ll
+总用量 4
+-rw-------. 1 root root 1241 8月  22 2018 anaconda-ks.cfg
+drwxr-xr-x. 2 root root   19 8月  21 12:15 home
+[root@xwz ~]# type -a ls    # 查看命令类型
+ls 是 `ls --color=auto' 的别名
+ls 是 /usr/bin/ls
+
+[root@xwz ~]# /bin/ls
+anaconda-ks.cfg  home
+[root@xwz ~]# ls        # 别名优先
+anaconda-ks.cfg  home
+[root@xwz ~]# \ls       # 跳过别名
+anaconda-ks.cfg  home
+
+[root@xwz ~]# cp -rf /etc /tmp      # 第一次
+[root@xwz ~]# cp -rf /etc /tmp      # 第二次
+cp：是否覆盖"/tmp/etc/fstab"？
+[root@xwz ~]# \cp -rf /etc /tmp
+
+永久别名
+[root@xwz ~]# vi /etc/bashrc    # 添加如下行
+alias wl='cat /etc/sysconfig/network-scripts/ifcfg-ens33'
+
+
+
+Linux获得帮助
+命令 --help
+[root@xwz ~]# ls --help
+# 用法：ls [选项] ... [文件] ...
+ls常见选项
+
+命令	作用
+-a	all,查看目录下的所有文件，包括隐藏文件
+-l	长列表显示
+-h	human以人性化方式显示出来
+-d	只列出目录名，不列出其他内容
+-t	按修改时间排序
+-S	按文件的Size排除
+-r	逆序排列reverse
+-l	显示文件的inode号(索引号)
+[root@xwz ~]# date --help
+[root@xwz ~]# date
+[root@xwz ~]# date +%H
+[root@xwz ~]# date +%F
+[root@xwz ~]# date 0214232131
+[root@xwz ~]# date 0214232131.00
+
+
+man手册名(针对命令帮助，针对配置文件帮助，针对函数帮助)
+中文man手册
+yum -y install man-pages-zh-CN.noarch
+echo "alias cman='man -M /usr/share/man/zh_CN'" >> .bashrc
+source .bashrc
+序号	英文	中文
+1*	Executable programs or shell commands	可执行程序或shell命令
+2	System calls (functions provided by the kernel)	系统调用
+3	Library calls (functions within program libraries)	库调用
+4	Special files (usually found in /dev)	特殊文件
+5*	File formats and conventions eg /etc/passwd	文件格式和约定
+6	Games	游戏
+7	Miscellaneous (including macro packages and conventions), e.g. man(7), groff(7)	杂项（包括宏和惯例）
+8*	System administration commands (usually only for root)	系统管理命令（通常仅适用于root用户）
+9	Kernel routines [Non standard]	内核例程（非标准）
+命令帮助：章节1，章节8
+
+函数帮助：章节2，章节3
+
+文件格式：章节5
+
+一般情况下不需要使用章节号
+
+[root@xwz ~]# man ls
+[root@xwz ~]# man man
+[root@xwz ~]# man useradd
+[root@xwz ~]# man setfacl       /EXAMPLES
+
+技巧1：按章节查询
+[root@xwz ~]# /usr/bin/passwd       # 修改用户口令命令
+[root@xwz ~]# /etc/passwd           # 包含用户信息的配置文件
+[root@xwz ~]# man -f passwd
+sslpasswd (1ssl)     - compute password hashes
+passwd (1)           - update user's authentication tokens
+[root@xwz ~]# man 1 passwd
+[root@xwz ~]# man 5 passwd
+技巧2：在所有章节中查询
+[root@xwz ~]# man -a passwd
+
+
+Windows和Linux组织文件区别
+Windows：	以多根的方式组织文件 C:\  D:\   E:\
+Linux:	    以单根的方式组织文件  /
+
+
+目录结构FSH(Filesystem Hierarchy Standard)
+路径	用处
+bin	普通用户使用的命令/bin/ls , /bin/date RHEL7淘汰
+sbin	管理员使用的命令/sbin/service RHEL7淘汰
+dev	设备文件/dev/sda , /dev/tty1 , /dev/pts/1 , /dev/zero , /dev/null , /dev/random
+root	root用户的HOME
+home	存储普通用户家目录
+proc	虚拟的文件系统，反应出来的是内核，进程信息或实时状态
+usr	系统文件，相当于C:\Windows
+/usr/local 软件安装的目录，相当于C:\Program
+/usr/bin 普通用户使用的应用程序
+/usr/sbin 管理员使用的应用程序
+/usr/lib 库文件Glibc
+/usr/lib64 库文件Glibc
+boot	存放系统启动相关的文件，例如kernel,grub(引导转载程序)
+etc	配置文件
+lib	库文件Glibc RHEL7淘汰
+lib64	库文件Glibc RHEL7淘汰
+tmp	临时文件(全局可写，进程产生的临时文件)
+var	存档的是一些变化文件，比如数据库，日志，邮件.....
+media	移动设备默认的挂载点
+mnt	手工挂载设备的挂载点
+net	automount进程挂载
+
+
+文件定位 路径
+绝对路径：从/开始的路径   /home/aaron/file1
+
+相对路径：从当前路径开始    a.txt   ./a.txt   ../a.txt
+
+[root@xwz /]# useradd aaron
+[root@xwz /]# touch /home/aaron/file1  # 绝对路径
+[root@xwz /]# touch ~/file2
+[root@xwz /]# touch ~aaron/file3
+[root@xwz 123]# pwd
+[root@xwz 123]# mkdir abc   # 相对路径
+[root@xwz 123]# touch ../file3
+[root@xwz 123]# touch file4
+[root@xwz 123]# touch abc/file5
+[root@xwz 123]# cd /home/aaron/   # 绝对路径
+[root@xwz aaron]# cd ~aaron/
+[root@xwz aaron]# cd ../../root   # 相对路径
+[root@xwz ~]# cd -      # 返回上次目录
+/home/aaron
+[root@xwz aaron]# cd ~      # 直接回家
+
+
+文件管理：创建/复制/移动/删除
+
+创建
+文件 touch
+[root@xwz ~]# touch file1.txt   # 无则创建，有则修改时间
+[root@xwz ~]# touch file3 file4
+[root@xwz ~]# touch /home/file10.txt
+[root@xwz ~]# touch /home/{maomao,gougou}
+[root@xwz ~]# touch file{1..20}
+[root@xwz ~]# touch file{a..c}
+[root@xwz ~]# touch file{old,new}       # {}集合，等价touch fileold filenew
+目录 mkdir
+[root@xwz ~]# mkdir dir1
+[root@xwz ~]# mkdir /home/dir2 /home/dir3
+[root@xwz ~]# mkdir /home/{dir4,dir5}
+[root@xwz ~]# mkdir -v /home/{dir6,dir7}    # 显示操作的消息
+[root@xwz ~]# mkdir -v /home/dir8/111/22
+[root@xwz ~]# mkdir -pv /home/dir8/111/22   # 创建目录和其所有父层目录
+[root@xwz ~]# mkdir -pv /home/{abc/{dir1,111},efg}
+
+复制
+[root@xwz ~]# mkdir /home/dir{1,2}
+[root@xwz ~]# touch install.log
+[root@xwz ~]# cp -v install.log /home/dir1
+[root@xwz ~]# cp -v install.log /home/dir1/abc.txt
+[root@xwz ~]# cp -rv /etc /home/dir1
+[root@xwz ~]# cp -v install.log /home/dir88     # 没有/home/dir88
+[root@xwz ~]# cp -v install.log /home/dir2
+[root@xwz ~]# cp -v anaconda-ks.cfg !$
+[root@xwz ~]# cp -rv /etc/sysconfig/network-scripts/ifcfg-ens33 /etc/passwd /etc/hostname /home/dir2
+# 将多个文件复制到同一个目录
+[root@xwz ~]# cp -rv /etc/sysconfig/network-scripts/ifcfg-ens33 /etc/passwd /etc/hostname .
+[root@xwz ~]# type -a cp
+cp 是 `cp -i' 的别名
+cp 是 /usr/bin/cp
+[root@xwz ~]# cp -rv /etc/sysconfig/network-scripts/ifcfg-ens33 /etc/sysconfig/network-scripts/ifcfg-ens33.bak
+[root@xwz ~]# cp -rv /etc/sysconfig/network-scripts/{ifcfg-ens33,ifcfg-ens33.bak}
+[root@xwz ~]# cp -rv /etc/sysconfig/network-scripts/ifcfg-ens33{,-old}
+
+移动
+[root@xwz ~]# mv file1 /home/dir3       # 将file1移动到/home/dir3
+[root@xwz ~]# mv file2 /home/dir3/file20        # 将file2移动到/home/dir3，并且改名file20
+[root@xwz ~]# mv file4 file5        # 将file4改名为file5
+
+删除
+[root@xwz ~]# cd /home
+[root@xwz home]# rm -rf dir1
+-r 递归
+
+-f force强制
+
+-v 详细过程
+
+[root@xwz ~]# mkdir /home/dir10
+[root@xwz ~]# touch /home/dir10/{file2,file3,.file4}
+[root@xwz ~]# rm -rf /home/dir10/*
+[root@xwz ~]# ls /home/dir10/ -a        # 隐藏文件没有被删除
+.  ..  .file4
+[root@xwz ~]# rm -rf file*
+[root@xwz ~]# rm -rf *.pdf
+
+
+
+文件管理：查看文件内容
+文本文件
+查看命令
+cat tac less more head tail tailf grep ....
+
+/bin/date
+/etc/hostname
+/etc/sysconfig/network-scripts/ifcfg-ens33
+/etc/passwd
+/etc/shadow
+/etc/group
+/etc/grub2.cfg
+/etc/resolv.conf
+/etc/profile        # 设置系统环境变量
+/etc/bashrc         # 影响bash shell环境
+/var/log/messages   # 系统主日志文件
+/var/log/secure     # 跟安全相关的日志如ssh登录，本地登录......
+cat
+
+-n 显示行号
+
+-A 包括控制字符(换行符/制表符)
+
+	linux$
+
+	windows^M$
+
+less more head tail tailf
+
+[root@xwz ~]# head /etc/passwd
+[root@xwz ~]# head -2 /etc/passwd
+[root@xwz ~]# tail /etc/passwd
+[root@xwz ~]# tail -1 /etc/passwd
+[root@xwz ~]# tail /var/log/messages
+[root@xwz ~]# tail -20 /var/log/messages
+[root@xwz ~]# tail -f /var/log/secure   # 动态查看文件尾部，关注的文件名
+[root@xwz ~]# tail -F /var/log/secure   # 动态查看文件尾部，关注的索引编号
+grep 针对文件内容进行过滤
+
+[root@xwz ~]# grep 'root' /etc/passwd
+[root@xwz ~]# grep '^root' /etc/passwd
+[root@xwz ~]# grep 'bash$' /etc/passwd
+[root@xwz ~]# grep 'failure' /var/log/secure
+
+
+
+vi编辑器
+创建文件练习 
+[root@xwz ~]# ll -a > list.txt
+文件编辑器 gedit
+
+文件编辑器 vi, vim, nano
+
+命令模式
+
+光标定位
+hjkl
+0 $
+gg G
+3G
+/string (n N可以循环)  快速定位到某一行
+/^d
+/txt$
+
+文本编辑(少量)
+y   复制 yy 3yy ygg yG        (以行为单位)
+d   剪切 dd 3dd dgg dG        (以行为单位)
+p   粘贴
+x   删除光标所在的字符
+D   从光标处删除到行尾
+u   undo撤销
+^r  redo重做
+r   可以用来修改一个字符
+
+进入其他模式
+a   进入插入模式，光标停在选中字母后
+i   进入插入模式，光标停在选中字母的位置
+o   进入插入模式，光标停在选中一行的下面新建行中
+A   进入插入模式，光标停在行尾
+​
+:   进入末行模式(扩展命令模式)
+V   进入可视行模式
+^v  进入可视块模式
+R   进入替换模式
+
+可视块模式
+块插入 选择块，I  在块前插入字符，ESC
+块替换 选择块，r  输入替换的字符
+块删除    选择块， d|x
+块复制    选择块，y
+
+
+扩展命令模式
+保存退出
+:10     进入第10行
+:w      保存
+:q      退出
+:wq     保存并退出
+:w!     强制保存
+:wq!    强制保存退出
+:x      保存并退出   ZZ
+:X      加密文档
+
+查找替换
+:范围 s/old/new/选项
+:1,5 s/root/aaron/      从1-5行的root 替换为aaron 每行替换第一个
+:5,$ s/root/aaron/      $表示最后一行
+:1,$ s/root/aaron/g     = :% s/root/aaron/g   %表示全文  g表示全局
+:% s#/dev/sda#/var/ccc#g
+:,8 s/root/aaron/       从当前行到第8行
+:4,9 s/^#//             4-9行的开头#替换为空
+:5,10 s/.*/#&/          5-10前加入#字符(.*整行，&引用查找的内容)
+
+读写另存为
+:w                      存储到当前文件
+:w /tmp/aaa.txt         另存为/tmp/aaa.txt
+:1,3 w /tmp/2.txt       将1-3行保存到文件
+:r /etc/hosts           读入文件到当前行后
+:5 r /etc/hosts         读入文件到第5行后
+
+设置环境
+临时设置
+
+:set nu                 设置行号
+:set ic                 不区分大小写
+:set ai                 自动缩进
+:set list               显示控制字符
+:set nonu               取消设置行号
+:set noic
+永久环境
+
+/etc/vimrc              影响所有系统用户
+~/.vimrc                影响某一个用户
+
+多文件编辑
+[root@xwz ~]# vim -O ls.txt /etc/hosts      ^ww切换
+[root@xwz ~]# cp /etc/hosts hosts1
+[root@xwz ~]# vimdiff /etc/hosts hosts1
