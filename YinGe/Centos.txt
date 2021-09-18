@@ -1,0 +1,156 @@
+=====网络相关======
+ip address     # 查看IP地址
+nmtui          # 图形化管理网络
+route           # 查看路由表
+systemctl restart network       # 重启网络服务
+cat /etc/sysconfig/network-scripts/ifcfg-ens33      # centos网卡配置文件 
+ss -ntlp                # 查看系统中tcp端口开启的情况
+ss -nulp                # 查看系统中udp端口开启的情况
+curl myip.ipip.net      # 查看服务器的IP地址
+curl -O mirrors.eagleslab.com/games.zip              # 下载文件
+
+
+====防火墙=====
+yum -y install httpd                # 安装httpd测试
+systemctl start httpd               # 启动httpd
+firewall-cmd --list-all             # 查看防火墙规则
+firewall-cmd --reload               # 重新加载防火墙规则
+firewall-cmd --add-port=80/tcp      # 临时放行80端口
+firewall-cmd --add-port=80/tcp --permanent      # 永久放行80端口
+firewall-cmd --add-service=http     # 放行http协议
+firewall-cmd --remove-xxxx          # 取消放行xxxx
+systemctl stop firewalld
+systemctl disable firewalld
+
+
+
+====开关机====
+poweroff        # 关机
+reboot          # 重启
+cal             # 查看日历
+cal -m          # 星期一作为一周第一天
+cal -y          # 显示一整年
+cal xxxx        # 显示xxxx年的日历
+
+
+===全局设置===
+hostnamectl set-hostname xxx       # 修改主机名
+
+
+===文件相关===
+pwd             # 查看当前所在目录
+cd              # 进入用户的家目录
+cd ~            # 进入用户的家目录
+cd ..           # 返回上一级目录
+cd /xxx/xxx     # 使用绝对路径切换到/xxx/xxx
+cd xxx/xxx      # 使用相对路径切换到xxx/xxx
+cd -            # 返回上次所在的目录
+ls              # 查看当前目录下有哪些文件
+ls -l           # 显示文件的详细信息         
+ls -lh          # 文件大小使用合适的单位显示
+ls -a           # 显示隐藏文件
+ls -ld          # 显示当前文件夹的信息
+ls path         # 查看path目录下的文件
+touch file      # 创建名叫file的空文件
+touch file{.new,.old}   # 同时创建file.old,file.new
+touch file{1..9}        # 创建file1~file9
+mkdir dir       # 创建名叫dir的文件夹
+mkdir -v dir    # 显示创建过程
+mkdir -p a/b/c  # 自动创建父级路径
+cp source destination   # 复制文件
+cp -r           # 复制文件夹
+cp -v           # 显示复制过程
+mv source destination       # 移动文件
+mv file* a      # 移动所有file开头的文件
+mv -v
+rm              # 删除文件
+rm -f           # 强行删除
+rm -r           # 删除文件夹
+updatedb        # 更新mlocate数据库
+locate file     # 查找file所在的路径
+
+====文本操作相关====
+cat             # 查看少量的文本文件
+cat -n          # 显示行号
+cat -A          # 显示特殊符号
+more            # 查看大量的文本
+less            # 更爽的查看大量的文本
+head            # 看文件的头部，默认看10行
+head -5         # 看5行
+tail            # 看文件的尾部，默认看10行
+tail -3
+tail -f         # 持续显示文件尾部新增的东西
+tailf           # 同上
+nano            # 记事本
+
+====vim相关====
+vim file        # 使用vim打开file
+i               # 进入插入模式
+o               # 另起一行进入插入模式
+esc键           # 退出插入模式
+:               # 进入命令模式
+:w              # 保存
+:w file1        # 另存为file1
+:q              # 退出
+:wq             # 保存退出
+:w!             # 强行写入
+:q!             # 不保存退出
+:wq!
+:x              # 等同于:wq 
+:X              # 加密本文件
+dd              # 剪切此行
+3dd             # 剪切3行
+yy              # 复制此行
+5yy             # 复制5行
+gg              # 回到首行
+G               # 去往末行
+p               # 粘贴
+u               # 撤销
+shift+v         # 可视行
+shift+ctrl+v    # 可是块
+/xxx            # 查找xxx
+n               # 查找下一个
+:% s/xxx/ooo/g     # 替换xxx为ooo
+vim -O file1 file2    # 同时编辑多个文件Ctrl+w w切换
+vimdiff file1 file2     # 比较文本的区别
+
+=====重定向与管道符相关====
+>               # 输出重定向
+>>              # 追加
+<               # 输入重定向
+cat > file.txt <<eof        # 使用cat写入文件内容
+echo "hello world" > file2.txt      # 使用echo写入文件内容
+
+====软件包管理====
+yum repolist    # 查看软件仓库
+yum install epel-release    # 安装企业软件扩展仓库
+yum -y install packets      # 静默安装软件
+yum -y remove packets       # 卸载软件
+yum provides locate         # 查看命令是由什么软件包提供的
+yum list |grep mlocate      # 查看目前仓库中所有的软件，并且过滤出有mlocate这行
+
+
+====系统配置文件的位置====
+/etc/rc.local               #开机会自动执行的文件，chmod +x /etc/rc.d/rc.local
+~/.bashrc                   # 当前用户登录的时候会执行的脚本
+/var/www/html               # apache的默认根目录
+
+
+
+====其他===
+type            # 查看命令的位置或者别名
+
+
+
+====web相关====
+yum -y install httpd
+systemctl start httpd
+systemctl enable httpd
+firewall-cmd --add-port=80/tcp --permanent
+firewall-cmd --reload
+yum -y install php* -skip-broken php-mysqlnd
+systemctl restart httpd
+vim /var/www/html/info.php
+<?php
+    phpinfo();
+?>
