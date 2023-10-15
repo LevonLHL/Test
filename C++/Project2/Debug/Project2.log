@@ -1,0 +1,6 @@
+﻿  多态.cpp
+  继承方式.cpp
+E:\Code\C++\Project2\继承方式.cpp(123,7): warning C4101: “s2”: 未引用的局部变量
+E:\Code\C++\Project2\继承方式.cpp(126,7): warning C4101: “s3”: 未引用的局部变量
+  正在生成代码...
+  Project2.vcxproj -> E:\Code\C++\Project2\Debug\Project2.exe
